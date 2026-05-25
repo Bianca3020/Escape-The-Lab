@@ -1,0 +1,43 @@
+    body {
+      background: #000a1a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+    #loading {
+      position: fixed;
+      inset: 0;
+      background: #000a1a;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #00ffcc;
+      font-family: monospace;
+      font-size: 18px;
+      letter-spacing: 4px;
+      z-index: 99;
+      transition: opacity 0.6s;
+    }
+    #loading .bar {
+      width: 200px; height: 4px;
+      background: #001a33;
+      margin-top: 20px;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    #loading .fill {
+      height: 100%;
+      background: #00ffcc;
+      width: 0%;
+      animation: load 1s ease-out forwards;
+      box-shadow: 0 0 10px #00ffcc;
+    }
+    @keyframes load { to { width: 100%; } }

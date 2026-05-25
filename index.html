@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Escape The Lab</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#000814;
+      overflow:hidden;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      width:100vw;
+      height:100vh;
+
+      font-family:monospace;
+    }
+
+    canvas{
+      border:2px solid #00ffcc;
+      image-rendering:pixelated;
+    }
+
+    /* ───────── Loading Screen ───────── */
+    #loading{
+      position:fixed;
+      inset:0;
+      background:#000814;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+
+      z-index:9999;
+    }
+
+    #loading h1{
+      color:#00ffcc;
+      font-size:28px;
+      margin-bottom:20px;
+      letter-spacing:2px;
+    }
+
+    .loading-box{
+      width:300px;
+      height:20px;
+      border:2px solid #00ffcc;
+      padding:2px;
+      overflow:hidden;
+    }
+
+    .loading-bar{
+      width:0%;
+      height:100%;
+      background:#00ffcc;
+      animation:loadAnim 1.4s linear forwards;
+    }
+
+    @keyframes loadAnim{
+      from{
+        width:0%;
+      }
+      to{
+        width:100%;
+      }
+    }
+    </style><style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#000814;
+      overflow:hidden;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      width:100vw;
+      height:100vh;
+
+      font-family:monospace;
+    }
+
+    canvas{
+      border:2px solid #00ffcc;
+      image-rendering:pixelated;
+    }
+
+    /* ───────── Loading Screen ───────── */
+    #loading{
+      position:fixed;
+      inset:0;
+      background:#000814;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+
+      z-index:9999;
+    }
+
+    #loading h1{
+      color:#00ffcc;
+      font-size:28px;
+      margin-bottom:20px;
+      letter-spacing:2px;
+    }
+
+    .loading-box{
+      width:300px;
+      height:20px;
+      border:2px solid #00ffcc;
+      padding:2px;
+      overflow:hidden;
+    }
+
+    .loading-bar{
+      width:0%;
+      height:100%;
+      background:#00ffcc;
+      animation:loadAnim 1.4s linear forwards;
+    }
+
+    @keyframes loadAnim{
+      from{
+        width:0%;
+      }
+      to{
+        width:100%;
+      }
+    }
+    </style>
+</head>
+
+<body>
+
+  <!-- Loading -->
+  <div id="loading">
+    <h1>ESCAPE THE LAB</h1>
+
+    <div class="loading-box">
+      <div class="loading-bar"></div>
+    </div>
+  </div>
+
+  <!-- Phaser -->
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+
+  <!-- Data -->
+  <script src="data/levels.js"></script>
+
+  <!-- Scenes -->
+  <script src="scenes/MenuScene.js"></script>
+  <script src="scenes/GameScene.js"></script>
+  <script src="scenes/GameOverScene.js"></script>
+
+  <!-- Main -->
+  <script src="main.js"></script>
+
+</body>
+</html>
