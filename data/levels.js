@@ -45,39 +45,25 @@ const LEVELS = [
   hint: 'Navigate the maze — watch your steps',
 
   playerStart: { x: 1, y: 1 },
-
   keycard: { x: 17, y: 12 },
-
   door: { x: 18, y: 1 },
-
   robots: [],
-
   walls: buildBorderWalls().concat([
   ...rowWall(3, 1, 6),
   ...rowWall(3, 9, 17),
-  
-  ...colWall(5, 4, 9),
-  
-  
+  ...colWall(5, 4, 9),  
   ...colWall(9, 1, 4),
-  
   ...rowWall(7, 3, 8),    
   ...rowWall(7, 10, 11),
-  
   ...colWall(14, 5, 10),
-  
   ...rowWall(11, 1, 7),
   ...rowWall(11, 10, 16),
-
     { x: 7, y: 5 },
     { x: 7, y: 6 },
-
     { x: 11, y: 8 },
     { x: 11, y: 9 },
-
     { x: 4, y: 13 },
     { x: 5, y: 13 },
-
     { x: 16, y: 5 },
     { x: 16, y: 6 }
 
@@ -133,19 +119,13 @@ const LEVELS = [
       { x:12, y:10, dir:'chaser', speed:100 }
     ],
     walls: buildBorderWalls().concat([
-      
     ...rowWall(3,1,7),
     ...rowWall(3,12,18),
-
     ...colWall(6,5,10),
-
     ...colWall(10,2,6),
     ...colWall(10,9,13),
-
     ...colWall(15,4,10),
-
     ...rowWall(11,2,7),
-
     ...rowWall(11,12,17),
       {x:5,y:7},{x:6,y:7},
     ])
