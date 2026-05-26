@@ -31,7 +31,6 @@
       image-rendering:pixelated;
     }
 
-    /* ───────── Loading Screen ───────── */
     #loading{
       position:fixed;
       inset:0;
@@ -101,7 +100,6 @@
       image-rendering:pixelated;
     }
 
-    /* ───────── Loading Screen ───────── */
     #loading{
       position:fixed;
       inset:0;
@@ -150,7 +148,6 @@
 
 <body>
 
-  <!-- Loading -->
   <div id="loading">
     <h1>ESCAPE THE LAB</h1>
 
@@ -159,18 +156,15 @@
     </div>
   </div>
 
-  <!-- Phaser -->
   <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
 
-  <!-- Data -->
   <script src="data/levels.js"></script>
 
-  <!-- Scenes -->
   <script src="scenes/MenuScene.js"></script>
+  <script src="scenes/LevelSelectScene.js"></script>
   <script src="scenes/GameScene.js"></script>
   <script src="scenes/GameOverScene.js"></script>
 
-  <!-- Main -->
   <script src="main.js"></script>
 
 </body>

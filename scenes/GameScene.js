@@ -20,7 +20,6 @@ class GameScene extends Phaser.Scene {
   preload() {
     const g = this.make.graphics({ x:0, y:0, add:false });
 
-    // Player
     g.clear();
     g.fillStyle(0x0a1a0a); g.fillRect(0,0,32,32);
     g.fillStyle(0x00ff88); g.fillRect(4,4,24,24);
@@ -29,7 +28,6 @@ class GameScene extends Phaser.Scene {
     g.fillRect(14,0,4,6); g.fillRect(12,5,8,3);
     g.generateTexture('player', 32, 32);
 
-    // Robot
     g.clear();
     g.fillStyle(0x1a0000); g.fillRect(0,0,32,32);
     g.fillStyle(0xcc1100); g.fillRect(4,4,24,24);
@@ -39,7 +37,6 @@ class GameScene extends Phaser.Scene {
     g.fillStyle(0xff6600); g.fillRect(9,27,4,5); g.fillRect(19,27,4,5);
     g.generateTexture('robot', 32, 32);
 
-    // Keycard
     g.clear();
     g.fillStyle(0x221100); g.fillRect(0,0,28,18);
     g.fillStyle(0xffcc00); g.fillRect(2,2,24,14);
@@ -48,7 +45,6 @@ class GameScene extends Phaser.Scene {
     g.fillStyle(0xffcc00); g.fillRect(15,5,8,2); g.fillRect(15,9,8,2); g.fillRect(15,13,5,2);
     g.generateTexture('keycard', 28, 18);
 
-    // Door locked
     g.clear();
     g.fillStyle(0x0a1525); g.fillRect(0,0,34,42);
     g.fillStyle(0x1a3a5a); g.fillRect(2,2,30,38);
@@ -57,7 +53,6 @@ class GameScene extends Phaser.Scene {
     g.fillStyle(0xff3300); g.fillCircle(17,39,4);
     g.generateTexture('door_locked', 34, 42);
 
-    // Door open
     g.clear();
     g.fillStyle(0x001020); g.fillRect(0,0,34,42);
     g.fillStyle(0x002030); g.fillRect(2,2,30,38);
@@ -66,7 +61,6 @@ class GameScene extends Phaser.Scene {
     g.fillStyle(0x00ff88); g.fillCircle(17,39,4);
     g.generateTexture('door_open', 34, 42);
 
-    // Wall
     g.clear();
     g.fillStyle(0x111e2e); g.fillRect(0,0,40,40);
     g.fillStyle(0x0a1520); g.fillRect(1,1,37,18);
@@ -75,7 +69,6 @@ class GameScene extends Phaser.Scene {
     g.lineStyle(1, 0x253850, 0.5); g.strokeRect(1,1,37,18); g.strokeRect(3,21,34,17);
     g.generateTexture('wall', 40, 40);
 
-    // Floor
     g.clear();
     g.fillStyle(0x040b12); g.fillRect(0,0,40,40);
     g.lineStyle(1, 0x0a1820, 1); g.strokeRect(0,0,40,40);

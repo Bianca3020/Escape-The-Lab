@@ -25,11 +25,7 @@ function colWall(x, y1, y2) {
   return w;
 }
 
-// ───────────────────────────────────────────────────────────────
-// LEVEL DATA
-// ───────────────────────────────────────────────────────────────
 const LEVELS = [
-  // LEVEL 1
   {
     title: 'LAB SECTOR A',
     hint: 'Find the keycard, then reach the door',
@@ -44,22 +40,50 @@ const LEVELS = [
       {x:14,y:8},{x:14,y:9},{x:14,y:10},
     ])
   },
-  // LEVEL 2
-  {
-    title: 'LAB SECTOR B',
-    hint: 'Navigate the maze — watch your steps',
-    playerStart: { x: 1, y: 1 },
-    keycard: { x: 18, y: 12 },
-    door:    { x: 18, y:  1 },
-    robots:  [],
-    walls: buildBorderWalls().concat([
-      ...rowWall(3,1,10), ...colWall(12,1,6),
-      ...rowWall(6,3,10), ...colWall(3,6,10),
-      ...rowWall(10,3,12),...colWall(12,10,12),
-      ...rowWall(13,4,16),
-    ])
-  },
-  // LEVEL 3
+{
+  title: 'LAB SECTOR B',
+  hint: 'Navigate the maze — watch your steps',
+
+  playerStart: { x: 1, y: 1 },
+
+  keycard: { x: 17, y: 12 },
+
+  door: { x: 18, y: 1 },
+
+  robots: [],
+
+  walls: buildBorderWalls().concat([
+  ...rowWall(3, 1, 6),
+  ...rowWall(3, 9, 17),
+  
+  ...colWall(5, 4, 9),
+  
+  
+  ...colWall(9, 1, 4),
+  
+  ...rowWall(7, 3, 8),    
+  ...rowWall(7, 10, 11),
+  
+  ...colWall(14, 5, 10),
+  
+  ...rowWall(11, 1, 7),
+  ...rowWall(11, 10, 16),
+
+    { x: 7, y: 5 },
+    { x: 7, y: 6 },
+
+    { x: 11, y: 8 },
+    { x: 11, y: 9 },
+
+    { x: 4, y: 13 },
+    { x: 5, y: 13 },
+
+    { x: 16, y: 5 },
+    { x: 16, y: 6 }
+
+  ])
+},
+
   {
     title: 'LAB SECTOR C',
     hint: 'A patrol robot is active — avoid it!',
@@ -75,7 +99,7 @@ const LEVELS = [
       {x:13,y:5},{x:13,y:6},{x:13,y:8},{x:13,y:9},
     ])
   },
-  // LEVEL 4
+
   {
     title: 'LAB SECTOR D',
     hint: 'Warning: Advanced Chase AI Active!',
@@ -96,7 +120,7 @@ const LEVELS = [
       ...rowWall(7, 5, 14),
     ])
   },
-  // LEVEL 5
+
   {
     title: 'MAIN CONTROL ROOM',
     hint: 'Final Area: Multiple pursuers tracking your position!',
@@ -109,26 +133,21 @@ const LEVELS = [
       { x:12, y:10, dir:'chaser', speed:100 }
     ],
     walls: buildBorderWalls().concat([
-      // top walls
+      
     ...rowWall(3,1,7),
     ...rowWall(3,12,18),
 
-    // left middle
     ...colWall(6,5,10),
 
-    // center
     ...colWall(10,2,6),
     ...colWall(10,9,13),
 
-    // right side
     ...colWall(15,4,10),
 
-    // lower left
     ...rowWall(11,2,7),
 
-    // lower right
     ...rowWall(11,12,17),
       {x:5,y:7},{x:6,y:7},
     ])
-  }
+  },  
 ];
